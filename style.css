@@ -1,8 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Figtree", sans-serif;
 }
+
 .navbar {
     width: 100%;
     background: #ffffff;
@@ -75,7 +76,9 @@
 
 .hero-section {
     width: 100%;
-    min-height: 406px;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
 
     display: flex;
     position: relative;
@@ -85,7 +88,9 @@
 
 .hero-content {
     width: 50%;
-    padding: 0 0 0 24px;
+    max-width: 50%;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .hero-text {
@@ -103,11 +108,14 @@
 }
 
 .hero-text p {
+    width: 558px;
+    height: 160px;
+
     margin: 12px 0 20px;
 
     font-family: "Figtree", sans-serif;
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 32px;
 }
 
 .hero-quote-btn {
@@ -118,11 +126,9 @@
     width: 240px;
     height: 50px;
 
-    background: linear-gradient(
-        90deg,
-        #005CD5,
-        #65A7FD
-    );
+    background: linear-gradient(90deg,
+            #005CD5,
+            #65A7FD);
 
     border-radius: 12px;
 
@@ -177,7 +183,9 @@
 
 .hero-image-area {
     width: 50%;
+    max-width: 50%;
     position: relative;
+    box-sizing: border-box;
 }
 
 .family-image {
@@ -191,7 +199,9 @@
 
     left: 513px;
 
-    width: 840px;
+    bottom: -10px;
+    max-width: 100%;
+    pointer-events: none;
     height: 476.5px;
 
     z-index: 0;
@@ -201,7 +211,7 @@
 .quote-form {
     position: absolute;
 
-    top: 62px;
+    top: 12px;
     left: 70%;
     transform: translateX(-50%);
 
@@ -301,7 +311,7 @@
     color: #999;
 }
 
-.phone-row > input {
+.phone-row>input {
     flex: 1;
 
     height: 32px;
@@ -359,11 +369,9 @@
     border: none;
     border-radius: 8px;
 
-    background: linear-gradient(
-        90deg,
-        #005CD5,
-        #65A7FD
-    );
+    background: linear-gradient(90deg,
+            #005CD5,
+            #65A7FD);
 
     color: #ffffff;
 
@@ -392,4 +400,16 @@
 .terms-text a {
     color: #0066d6;
     text-decoration: underline;
+}
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
